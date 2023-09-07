@@ -1,19 +1,32 @@
 package gliprest.dto.request;
 
+import glipBack.entities.Avis;
+import glipBack.entities.Post;
+import glipBack.entities.Role;
+import glipBack.entities.Video;
+
+import java.util.List;
+import java.util.Set;
+
 public class UtilisateursRequest {
-    Long id;
-    String mail;
-    String password;
-    String pseudo;
+    private String id;
+    private String mail;
+    private String password;
+    private  String pseudo;
+    private String role;
+    private List<Long> postIds;
+    private List<Long> videoLikeIds;
+    private List<Long>videosPosteeIds;
 
     public UtilisateursRequest() {
     }
 
-    public Long getId() {
+
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -39,5 +52,37 @@ public class UtilisateursRequest {
 
     public void setPseudo(String pseudo) {
         this.pseudo = pseudo;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public List<Long> getPostIds() {
+        return postIds;
+    }
+
+    public void setPostIds(List<Long> postIds) {
+        this.postIds = postIds;
+    }
+
+    public List<Long> getVideoLikeIds() {
+        return videoLikeIds;
+    }
+
+    public void setVideoLikeIds(List<Long> videoLikeIds) {
+        this.videoLikeIds = videoLikeIds;
+    }
+
+    public List<Long> getVideosPosteeIds() {
+        return videosPosteeIds;
+    }
+
+    public void setVideosPosteeIds(List<Long> videosPosteeIds) {
+        this.videosPosteeIds = videosPosteeIds;
     }
 }
