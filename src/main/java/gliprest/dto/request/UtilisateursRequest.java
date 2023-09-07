@@ -15,7 +15,16 @@ public class UtilisateursRequest {
     private  String pseudo;
     private String role;
     private List<Long> postIds;
-    private List<Long> videoLikeIds;
+    private List<Long> avisIds;
+
+    public List<Long> getAvisIds() {
+        return avisIds;
+    }
+
+    public void setAvisIds(List<Long> avisIds) {
+        this.avisIds = avisIds;
+    }
+
     private List<Long>videosPosteeIds;
 
     public UtilisateursRequest() {
@@ -70,13 +79,6 @@ public class UtilisateursRequest {
         this.postIds = postIds;
     }
 
-    public List<Long> getVideoLikeIds() {
-        return videoLikeIds;
-    }
-
-    public void setVideoLikeIds(List<Long> videoLikeIds) {
-        this.videoLikeIds = videoLikeIds;
-    }
 
     public List<Long> getVideosPosteeIds() {
         return videosPosteeIds;
