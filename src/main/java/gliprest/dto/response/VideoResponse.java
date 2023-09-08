@@ -1,5 +1,8 @@
 package gliprest.dto.response;
 
+import glipBack.entities.Video;
+import org.springframework.beans.BeanUtils;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
@@ -19,10 +22,19 @@ public class VideoResponse {
 
     private LocalTime duree;
 
-    private AvisResponse avisResponse;
+/*
+    private AvisResponse avis;
 
     private UtilisateurResponse proprietaire;
 
-    private List<Long> postIds;
-    private Long genreId;
+    private List<PostResponse> posts;
+    private GenreResponse genre;
+*/
+
+    public VideoResponse() {
+    }
+    public VideoResponse(Video video) {
+        BeanUtils.copyProperties(video, this, "avis", "proprietaire", "posts", "genre");
+
+    }
 }
